@@ -8,9 +8,22 @@
 # After all iterations, the program should display the number of months, 
 # the total inches of rainfall, and the average rainfall per month for the entire period.
 
+#Author: Faith Lamah
+#Date: 09/24/2025
+#Title: Average Rainfall
+
 def main():
     ######################
-    # WRITE YOUR CODE HERE
+    year = int(input('How many years of rainfall would you like collected? '))
+    total_rainfall = 0
+    for x in range(year):
+        for month in range(1, 13):
+            month_rainfall = int(input(f'How many inches of rainfall was in month {month}?'))
+            month = month + 1
+            total_rainfall = total_rainfall + month_rainfall
+    print(f'The total rainfall is {total_rainfall} inches.')
+    print(f'The total number of months is {month - 1}.')
+    print(f'The average rainfall per month for the entire period is {total_rainfall/month} inches.')
     ######################    
 
 
